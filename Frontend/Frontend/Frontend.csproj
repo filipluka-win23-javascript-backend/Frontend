@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-Frontend-a05916c2-ed0f-4298-8b46-04457db5985e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Frontend.Client\Frontend.Client.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4" />
+  </ItemGroup>
+
+</Project>

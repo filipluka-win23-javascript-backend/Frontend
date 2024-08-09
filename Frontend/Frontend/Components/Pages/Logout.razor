@@ -1,0 +1,42 @@
+﻿@page "/logout"
+
+
+@inject NavigationManager NavigationManager
+
+<div class="logout-container">
+    <div class="title">
+        <h3> You are successfully logged out</h3>
+    </div>
+    <div class="button">
+        <NavLink href="/" class="btn btn-theme btn-nav"><i class="fa fa-arrow-right-from-bracket"></i><span>Go To Start Page</span></NavLink>
+    </div>
+    <div class="button">
+        <NavLink href="/signin" class="btn btn-theme btn-nav"><i class="fa fa-arrow-right-from-bracket"></i><span>Go To Sign In Page</span></NavLink>
+    </div>
+</div>
+
+
+
+@functions {
+    private async Task HandleSignOut()
+    {
+        await SignInManager.SignOutAsync();
+        
+        
+    }
+}
+
+@code{
+
+    protected override async Task OnInitializedAsync() {
+        try
+        {
+            await HandleSignOut();
+        }
+        catch(Exception ex)
+        {
+        }
+    }
+
+}
+
